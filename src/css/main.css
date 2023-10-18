@@ -1,0 +1,44 @@
+
+:root {
+	--font-size : calc(1rem + (1vw / 5));
+	
+	--bg-img	: url('../img/carbon_fibre.webp');
+	--fg-img	: url('../img/greek-vase.webp');
+}
+
+@media only screen and (max-width: 800px) {
+	#page {
+		width: calc(90% - 3em);
+	}
+}
+@media only screen and (min-width: 1500px) {
+	#page {
+		width: 800px;
+	}
+}
+
+body {
+	font-size: var(--font-size);
+	color: white;
+	background: var(--bg-img);
+}
+
+#page {
+	color: black;
+	background: var(--fg-img);
+	padding: 1.5em 3em;
+	
+	width: 45%;
+	margin: 2em auto;
+	
+	display: grid;
+	grid-gap: 1em;
+}
+
+header { text-align: center; }
+
+ul {
+	list-style: '🦝 ';
+}
+
+summary { cursor: pointer; }
