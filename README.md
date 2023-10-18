@@ -1,0 +1,2 @@
+# Smol
+ Smol individual webpages
