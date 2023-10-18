@@ -2,22 +2,23 @@
       body {
           grid-template-columns: 1fr !important;
           grid-template-areas:
+			  "header"
               "main"
               "side" !important;
       }
-      #page, footer {
+      #page, #side {
           width: 80% !important;
       }
 }
 @media only screen and (min-width: 1500px) {
-      body {
-          justify-content: space-around;
-      }
-      #page, footer {
-      }
+		body {
+			width: 70%;
+			margin: auto;
+		}
 }
 
 body {
+	font-size: calc(1rem + (1vw / 5));
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     font-family: 'Comic Sans MS', 'Comic Sans', fantasy, sans-serif;
