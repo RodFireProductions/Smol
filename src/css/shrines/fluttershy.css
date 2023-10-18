@@ -1,0 +1,109 @@
+@media only screen and (max-width: 800px) {
+      body {
+          grid-template-columns: 1fr !important;
+          grid-template-areas:
+              "main"
+              "side" !important;
+      }
+      #page, footer {
+          width: 80% !important;
+      }
+}
+@media only screen and (min-width: 1500px) {
+      body {
+          justify-content: space-around;
+      }
+      #page, footer {
+      }
+}
+
+body {
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-family: 'Comic Sans MS', 'Comic Sans', fantasy, sans-serif;
+
+    background-image: url("../../img/shrines/flutter_cottage.png");
+    background-repeat: repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: 25% 1fr 1fr;
+    grid-template-rows: 30% 1fr;
+    grid-template-areas:
+        "header header side"
+        "main main side";
+}
+#page, #side {
+    border: forestgreen solid 3px;
+    background: #0f0f0f33;
+}
+hr { border: none; border-bottom: white dotted 3px; }
+
+header {
+    grid-area: header;
+
+    text-align: center;
+
+    display: block;
+    margin: .5em auto;
+    width: calc(90% - 2em);
+    height: 90%;
+    padding: 1em 2em;
+}
+
+header h1 {
+    font-size: 5em;
+    margin: 0;
+}
+header p {
+    font-size: 2em;
+    margin: 0;
+}
+
+#page {
+    grid-area: main;
+    line-height: 1.5;
+
+    display: block;
+    margin: 1em auto;
+    width: calc(90% - 2em);
+    height: 90%;
+    padding: 1em 2em;
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+#side {
+    grid-area: side;
+
+    width: 80%;
+    min-height: 250px;
+    max-height: 100%;
+
+    display: block;
+    margin: auto;
+    margin-top: 1em;
+    padding: 1em;
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+    line-height: 1.5;
+}
+
+a {
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+ul {
+    list-style-type: '🐇 ';
+}
+
+#browser-ponies {
+    color: black;
+    text-shadow: none;
+    cursor: pointer;
+}
