@@ -30,9 +30,12 @@
 /* -- */
 @media only screen and (max-width: 800px) {
      #page { width: 90% !important; }
+     .tooBig { width: 70%; }
+     .bcSmall { display: block !important; height: 400px !important; }
+     .bcBig { display: none; }
 }
 @media only screen and (min-width: 1500px) {
-		#page { width: 900px !important; }
+	#page { width: 900px !important; }
 }
 
 /* -- */
@@ -68,7 +71,7 @@ h2 { font-size: calc(1.4rem + (1.2vw / 5)); }
 	background: var(--fg-color);
 }
 
-main p { text-indent: 3em; }
+main p { text-indent: 3em; text-align: justify; }
 footer p { text-align: center; }
 
 header, main, footer, details { padding: 1rem; }
@@ -85,6 +88,13 @@ a:hover {
 	text-decoration: line-through var(--accent-color);
 }
 
+img {
+    display: block;
+    margin: auto;
+    width: auto;
+    max-width: 90%;
+}
+
 /* -- */
 
 .youtube, iframe {
@@ -96,11 +106,19 @@ a:hover {
 .buttons {
     display: grid;
     justify-content: center;
-
+    grid-gap: 1rem;
 }
 .buttons img {
     display: block;
     margin: auto;
     width: auto;
     max-width: 90%;
+}
+
+.tooBig {
+    width: 30%;
+}
+
+.bcSmall {
+    display: none;
 }
