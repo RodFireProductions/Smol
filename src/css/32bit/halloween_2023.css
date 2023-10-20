@@ -1,0 +1,98 @@
+
+@font-face {
+    font-family: 'Beth Ellen';
+    src: local('Beth Ellen'),
+    url("../../fonts/BethEllen-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'IM FELL Double Pica';
+    src: local('IM FELL Double Pica PRO'),
+    url("../../fonts/IMFellTypesClass/IMFeDPrm29c.otf") format("opentype");
+}
+
+:root {
+	--bg-img		: url('../../img/32bit/halloween_2023/angel_with_skeleton_white.png');
+	--bg-color		: black;
+	--fg-color		: black;
+	
+	--font-color	: #eee;
+	--font-title	: 'Beth Ellen', cursive, serif;
+	--font-main		: 'IM FELL Double Pica', serif;
+	--font-size		: calc(1rem + (1.2vw / 5));
+	
+	--outline		: dotted 2px white;
+	
+	--accent-color	: #DABCED;
+}
+/* -- */
+@media only screen and (max-width: 800px) {
+     #page { width: 90% !important; }
+}
+@media only screen and (min-width: 1500px) {
+		#page { width: 900px !important; }
+}
+
+/* -- */
+
+header {
+	text-align: center;
+}
+
+header h1, header p {
+	margin: 0;
+}
+
+body {
+	background: var(--bg-img) var(--bg-color);
+	background-size: 25%;
+	background-attachment: fixed;
+	color: var(--font-color);
+	font-family: var(--font-main);
+	font-size: var(--font-size);
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-title); text-align: center; }
+h2 { font-size: calc(1.4rem + (1.2vw / 5)); }
+
+#page {
+	display: block;
+	margin: 2em auto;
+	width: 50%;
+	background: var(--fg-color);
+}
+
+#page p { text-indent: 3em; }
+
+header, main, footer, details { padding: 1rem; }
+header, details, footer { border: var(--outline); }
+
+summary { cursor: pointer; }
+
+a {
+	color: var(--accent-color);
+	text-decoration: underline var(--font-color);
+}
+a:hover {
+	color: var(--font-color);
+	text-decoration: line-through var(--accent-color);
+}
+
+/* -- */
+
+.youtube {
+	display: block;
+	margin: 1rem auto;
+	width: 90%;
+}
+
+
+
+
+
+
+
+
+
+
+
