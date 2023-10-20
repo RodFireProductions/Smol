@@ -62,7 +62,8 @@ h2 { font-size: calc(1.4rem + (1.2vw / 5)); }
 	background: var(--fg-color);
 }
 
-#page p { text-indent: 3em; }
+main p { text-indent: 3em; }
+footer p { text-align: center; }
 
 header, main, footer, details { padding: 1rem; }
 header, details, footer { border: var(--outline); }
@@ -80,7 +81,7 @@ a:hover {
 
 /* -- */
 
-.youtube {
+.youtube, iframe {
 	display: block;
 	margin: 1rem auto;
 	width: 90%;
