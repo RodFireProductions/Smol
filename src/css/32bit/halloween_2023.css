@@ -35,7 +35,7 @@
      .bcBig { display: none; }
 }
 @media only screen and (min-width: 1500px) {
-	#page { width: 900px !important; }
+	/*#page { width: 900px !important; }*/
 }
 
 /* -- */
