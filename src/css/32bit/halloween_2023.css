@@ -1,3 +1,5 @@
+/* -- Skeleton-Romantic -- */
+
 
 @font-face {
     font-family: 'Beth Ellen';
@@ -12,17 +14,17 @@
 }
 
 :root {
-	--bg-img		: url('../../img/32bit/halloween_2023/angel_with_skeleton_white.png');
+	--bg-img		: url('../../img/32bit/halloween_2023/angel_with_skeleton_white.webp');
 	--bg-color		: black;
 	--fg-color		: black;
-	
+
 	--font-color	: #eee;
 	--font-title	: 'Beth Ellen', cursive, serif;
 	--font-main		: 'IM FELL Double Pica', serif;
 	--font-size		: calc(1rem + (1.2vw / 5));
-	
+
 	--outline		: dotted 2px white;
-	
+
 	--accent-color	: #DABCED;
 }
 /* -- */
@@ -87,13 +89,14 @@ a:hover {
 	width: 90%;
 }
 
+.buttons {
+    display: grid;
+    justify-content: center;
 
-
-
-
-
-
-
-
-
-
+}
+.buttons img {
+    display: block;
+    margin: auto;
+    width: auto;
+    max-width: 90%;
+}
