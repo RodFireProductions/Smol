@@ -1,7 +1,7 @@
 
 :root {
 	--font-size : calc(1rem + (1vw / 5));
-	
+
 	--bg-img	: url('../img/carbon_fibre.webp');
 	--fg-img	: url('../img/greek-vase.webp');
 }
@@ -27,10 +27,10 @@ body {
 	color: black;
 	background: var(--fg-img);
 	padding: 1.5em 3em;
-	
+
 	width: 45%;
 	margin: 2em auto;
-	
+
 	display: grid;
 	grid-gap: 1em;
 }
@@ -39,6 +39,11 @@ header { text-align: center; }
 
 ul {
 	list-style: '🦝 ';
+}
+
+img {
+	display: block;
+	margin: 5px auto;
 }
 
 summary { cursor: pointer; }
