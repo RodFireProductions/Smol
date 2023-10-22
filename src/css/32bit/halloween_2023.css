@@ -78,6 +78,7 @@ header, main, footer, details { padding: 1rem; }
 header, details, footer { border: var(--outline); }
 
 summary { cursor: pointer; }
+details { margin: .5em auto; }
 
 a {
 	color: var(--accent-color);
@@ -94,6 +95,17 @@ img {
     width: auto;
     max-width: 90%;
 }
+
+hr {
+	border: none;
+	border-bottom: var(--outline);
+	margin: 1em auto;
+}
+
+ol { list-style: lower-roman; }
+ul { list-style: '💀 '; }
+
+input { padding: 5px; }
 
 /* -- */
 
@@ -134,3 +146,12 @@ img {
 .bcSmall {
     display: none;
 }
+
+.field {
+	padding: 1em;
+}
+
+
+
+
+
