@@ -34,8 +34,8 @@
      .bcSmall { display: block !important; height: 400px !important; }
      .bcBig { display: none; }
 }
-@media only screen and (min-width: 1500px) {
-	/*#page { width: 900px !important; }*/
+@media only screen and (min-width: 1800px) {
+	#page { width: 900px !important; }
 }
 
 /* -- */
@@ -96,6 +96,18 @@ img {
 }
 
 /* -- */
+
+#thankyou {
+	display: none;
+}
+
+#thankyou:target {
+	display: block;
+	background-color: var(--accent-color);
+	color: var(--fg-color);
+	
+	padding: 1em;
+}
 
 .youtube, iframe {
 	display: block;

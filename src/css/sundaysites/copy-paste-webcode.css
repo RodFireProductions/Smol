@@ -1,0 +1,91 @@
+@media only screen and (max-width: 800px) {
+    #page { width: calc(90% - 4em) !important; }
+}
+@media only screen and (min-width: 1500px) {
+	#page { width: calc(900px - 4em) !important; }
+}
+
+:root {
+	--bg-img		: url('../../img/sundaysites/oriental-tiles.png');
+	--bg-color		: black;
+	--fg-img		: url('../../img/sundaysites/fabric_1.webp');
+	--fg-color		: white;
+
+	--font-color	: black;
+	--font-title	: serif;
+	--font-main		: sans-serif;
+	--font-size		: calc(1rem + (1.2vw / 5));
+
+	--outline		: ;
+
+	--accent-color	: #0D1238;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-title);
+	color: var(--accent-color);
+}
+
+ul { list-style: '🦷 '; }
+
+header { text-align: center; }
+
+a { color: var(--accent-color); }
+a:hover { color: var(--font-color); }
+
+
+::selection {
+	background: var(--accent-color);
+	color: var(--fg-color);
+}
+::-moz-seletcion {
+	background: var(--accent-color);
+	color: var(--fg-color);
+}
+code pre::selection {
+	background: var(--fg-color);
+	color: var(--accent-color);
+}
+code pre::-moz-seletcion {
+	background: var(--fg-color);
+	color: var(--accent-color);
+}
+mark {
+	background: var(--accent-color);
+	color: var(--fg-color);
+}
+
+body {
+	background: var(--bg-img) var(--bg-color);
+	background-attachment: fixed;
+	font-size: var(--font-size);
+	font-family: var(--font-main);
+	color: var(--font-color);
+}
+
+#page {
+	background: var(--fg-img) var(--fg-color);
+	
+	display: block;
+	margin: 2em auto;
+	width: 50%;
+	padding: 1em 2em;
+	
+	border-radius: 25px;
+}
+
+code pre {
+	width: auto;
+	max-width: 95%;
+	overflow-x: auto;
+	
+	background: var(--accent-color);
+	color: var(--fg-color);
+	
+	padding: 1em;
+	border-radius: 15px;
+	
+	display: block;
+}
+
+summary { cursor: pointer; }

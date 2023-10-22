@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../src/css/sundaysites/copy-paste-webcode.css">
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦝</text></svg>">
+        <title>Copy & Paste Webcode | Sunday Sites</title>
+	</head>
+	<body>
+		<div id="page">
+			<header>
+				<h1>Copy & Paste Webcode</h1>
+			</header>
+			<main>
+				<section id="introduction">
+					<p>
+						This is a page of small code snippets that I'm often typing
+						over and over again. Note: <strong>These are based off of how I personlly
+						set up my webpages and file organization.</strong>
+					</p>
+					<ul>
+						<li><a href="#html">HTML</a></li>
+						<li><a href="#css">CSS</a></li>
+						<li><a href="#js">JS</a></li>
+					</ul>
+				</section>
+				
+				<section id="html">
+					<h2>HTML</h2>
+					<p>HTML skeleton:</p>
+<code><pre>
+&#60;!DOCTYPE html&#62;
+&#60;html lang="en-US"&#62;
+    &#60;head&#62;
+        &#60;meta charset="utf-8"&#62;
+        &#60;meta name="viewport" content="width=device-width, initial-scale=1.0"&#62;
+        &#60;link rel="stylesheet" href="./src/css/main.css"&#62;
+        &#60;link rel="shortcut icon" href="favicon.ico"&#62;
+        &#60;title&#62;Title&#60;/title&#62;
+    &#60;/head&#62;
+    &#60;body&#62;
+        &#60;div id="page"&#62;
+            &#60;header&#62;
+                &#60;h1&#62;&#60;/h1&#62;
+            &#60;/header&#62;
+            &#60;main&#62;
+                &#60;section&#62;
+                    &#60;h2&#62;&#60;/h2&#62;
+                &#60;/section&#62;
+            &#60;/main&#62;
+            &#60;footer&#62;&#60;/footer&#62;
+        &#60;/div&#62;
+    &#60;/body&#62;
+&#60;/html&#62;
+</pre></code>
+					<p>Anchor List:</p>
+<code><pre>
+&#60;ul&#62;
+    &#60;li&#62;&#60;a href="#"&#62;&#60;/a&#62;&#60;/li&#62;
+    &#60;li&#62;&#60;a target="_blank" href="#"&#62;&#60;/a&#62;&#60;/li&#62;
+&#60;/ul&#62;
+</pre></code>
+					<p>Emoji favicon:</p>
+<code><pre>
+&#60;link rel="icon" href="data:image/svg+xml,&#60;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&#62;&#60;text y=%22.9em%22 font-size=%2290%22&#62;🦝&#60;/text&#62;&#60;/svg&#62;"&#62;
+</pre><code>
+				</section>
+				
+				<section id="css">
+					<h2>CSS</h2>
+					<p>Simple CSS variable set up:</p>
+<code><pre>
+:root {
+    --bg-img        : url('');
+    --bg-color      : black;
+    --fg-img        : url('');
+    --fg-color      : white;
+
+    --font-color    : black;
+    --font-title    : serif;
+    --font-main     : sans-serif;
+    --font-size     : calc(1rem + (1.2vw / 5));
+
+    --outline       : ;
+
+    --accent-color  : #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-title);
+    color: var(--accent-color);
+}
+
+a { color: var(--accent-color); }
+a:hover { color: var(--font-color); }
+
+body {
+    background: var(--bg-img) var(--bg-color);
+    background-attachment: fixed;
+    font-size: var(--font-size);
+    font-family: var(--font-main);
+    color: var(--font-color);
+}
+
+#page {
+    background: var(--fg-img) var(--fg-color);
+}
+</pre></code>
+					<p>Media queries:</p>
+<code><pre>
+@media only screen and (max-width: 800px) {
+    #page { width: 90% !important; }
+}
+@media only screen and (min-width: 1500px) {
+    #page { width: 900px !important; }
+}
+</pre></code>
+					<p>Font-face definition:</p>
+<code><pre>
+@font-face {
+    font-family: '';
+    src: local(''),
+    url("../fonts/.ttf") format("truetype");
+}
+</pre></code>		
+				</section>
+				
+				<section id="js">
+					<h2>JS</h2>
+					<p>Dark/Light mode toggle:</p>
+<code><pre>
+const userPref = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+const currentTheme = localStorage.getItem('theme') ?? userPref
+const syntaxTheme = document.querySelector("#theme-link");
+
+
+if (currentTheme) {
+    document.documentElement.setAttribute('saved-theme', currentTheme);
+    //syntaxTheme.href = currentTheme === 'dark' ?  '{{ $darkSyntax.Permalink }}' :  '{{ $lightSyntax.Permalink }}';
+}
+
+const switchTheme = (e) => {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('saved-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    }
+    else {
+        document.documentElement.setAttribute('saved-theme', 'light')
+        localStorage.setItem('theme', 'light')
+    }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    // Darkmode toggle
+    const toggleSwitch = document.querySelector('#darkmode-toggle')
+
+    // listen for toggle
+    toggleSwitch.addEventListener('change', switchTheme, false)
+
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true
+    }
+})
+</pre></code>
+				</section>
+			</main>
+			<hr>
+			<footer>
+				<p>
+					This page was made for
+					<a target="_blank" href="https://sundaysites.cafe">Sunday Sites</a>'s
+					Thirty-Third Session: Make a site that serves you.
+				</p>
+				<p>
+					Go back to my <a href="https://smol.shroom.ink/sundaysites/">user page</a>?
+				</p>
+				<details>
+					<summary>Credits</summary>
+					<ul>
+						<li><a target="_blank" href="https://www.toptal.com/designers/subtlepatterns/oriental-tiles-pattern/">Body Background Image</a></li>
+						<li><a target="_blank" href="https://www.toptal.com/designers/subtlepatterns/fabric-1/">Section Background Image</a></li>
+					</ul>
+				</details>
+			</footer>
+		</div>
+	</body>
+</html>
